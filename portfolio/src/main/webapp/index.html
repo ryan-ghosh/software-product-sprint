@@ -2,18 +2,126 @@
 <html>
   <head>
     <meta charset="UTF-8">
-    <title>My Portfolio</title>
+    <meta name="viewport" content="width=device-width, initial-sccale=1.0">
+    <title>Ryan Ghosh Portfolio Website</title>
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/normalize/7.0.0/normalize.min.css">
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/5.11.2/css/all.css">
     <link rel="stylesheet" href="style.css">
-    <script src="script.js"></script>
+    <link href="https://fonts.googleapis.com/css?family=Source+Code+Pro:400,900|Source+Sans+Pro:300,900&display=swap" rel=stylesheet>
   </head>
   <body>
-    <div id="content">
-      <h1>My Portfolio</h1>
-      <p>This is my portfolio.</p>
-      <p>Click <a href="/hello">here</a> to see content created by server code.</p>
-      <p>Click here to get a random message:</p>
-      <button onclick="addRandomGreeting()">Hello</button>
-      <div id="greeting-container"></div>
+      <header>
+        <div class="logo">
+            <img src="/images/logo.PNG" alt="">
+        </div>
+        <button class="nav-toggle" aria-label="toggle navigation">
+            <span class="hamburger"></span>
+        </button>
+        <nav class="nav">
+            <ul class="nav__list">
+                <li class="nav__item"><a href="#home" class="nav__link">Home</a> </li>
+                <li class="nav__item"><a href="#services" class="nav__link">My Services</a> </li>
+                <li class="nav__item"><a href="#about-me" class="nav__link">About me</a> </li>
+                <li class="nav__item"><a href="#my-work" class="nav__link">My Work</a> </li>
+            </ul>
+        </nav>
+      </header>
+    <section class="intro" id="home">
+        <h1 class="section__title section__title--intro">
+            Hi, I am <strong>Ryan Ghosh</strong>
+        </h1>
+        <p class="section__subtitle section__subtitle--intro">Software Engineer</p>
+        <img src="/images/portfolio3.JPG" alt="a picture of me" class="intro__img">
+    </section>
+
+    <section class="my-services" id="services">
+    <h2 class="section__title section__title--services">
+        What I do
+    </h2>
+    <div class="services">
+        <div class="service">
+            <h3>Quantitative Skills</h3>
+            <p>I have extensive knowledge in quantitative fields and can apply them 
+                to any job. These involve bayesian statistics, random variables, differential equations, 
+                multivariable calculus, signals and systems, linear algebra, and complex analysis.
+                I have used these skills to conduct research in applied mathematics and neuromorphics.
+            </p>
+        </div>
+        <div class="service">
+            <h3>Programming Skills</h3>
+            <p>I possess a variety of technical skills pertaining to software development. 
+                These include: Python, C/C++, Q/kdb, Java, Linux OS, MySQL, Git, Assembly Language,
+                and MATLAB. 
+            </p>
+        </div>
+        <div class="service">
+            <h3>Front-End Development</h3>
+            <p>I have experience with some front-end languages, frameworks, and tools.
+                My first exposure to programming was creating a satirical sports website
+                with my friend in the tenth grade. I have used HTML, CSS, JavaScript, Dart, and Flutter.
+            </p>
+        </div>
     </div>
+    <a href="#my-work" class="btn">My Work</a>
+    </section>
+
+
+    <section class="about-me" id="about">
+        <h2 class="section__title section__title--about">Who I am</h2>
+        <p class="section__subtitle section__subtitle--about">
+            Junior in Computer Engineering at the University of Toronto
+        </p>
+        <div class="about-me__body">
+            <p>I am currently an intern at a quantitative hedge fund on the risk team. My project
+                is to work on improving the live position server, where I develop algorithms to moderate
+                risk and execution across strategies. I am
+                passionate about software engineering and quantitative finance.
+                Primary languages are C++, Python, and Q. Previous work experience
+                includes undergraduate research assistant under Professor Joyce Poon
+                in the field of neuromorphics and AI, and research intern in the field of
+                applied mathematics under Professor Dr. Anco. 
+            </p>
+        </div>
+
+        <img src="/images/portfolio2.JPG" alt="Pictures about me" class="about-me__img">
+    </section>
+
+
+    <section class="my-work" id="my-work">
+        <h2 class="section__title section__title--work">My work</h2>
+        <p class="section__subtitle section__subtitle--work">A selection of my range of work</p>
+
+        <div class="portfolio">
+            <a href="portfolio-item0.html" class="portfolio__item">
+                <img src="/images/stocks.jpg" alt="" class=portfolio__img>
+            </a>
+            <a href="portfolio-item1.html" class="portfolio__item">
+                <img src="/images/sprout.png" alt="" class=portfolio__img>
+            </a>
+            <a href="portfolio-item2.html" class="portfolio__item">
+                <img src="/images/candycrush.PNG" alt="" class=portfolio__img>
+            </a>
+            <a href="portfolio-item3.html" class="portfolio__item">
+                <img src="/images/nlp.jpg"" alt="" class=portfolio__img>
+            </a>
+            <a href="portfolio-item4.html" class="portfolio__item">
+                <img src="/images/pltrmaps.PNG" alt="" class=portfolio__img>
+            </a>
+            <a href="portfolio-item5.html" class="portfolio__item">
+                <img src="/images/snakegame.PNG" alt="" class=portfolio__img>
+            </a>
+        </div>
+
+    </section>
+
+    <footer class="footer">
+        <a href="mailto:ryan.ghosh21@gmail.com" class="footer-link">ryan.ghosh21@gmail.com</a>
+        <ul class="social-list">
+            <li class="social-list__item"><a class="social-list__link" href="https://github.com/ryan-ghosh"><i class="fab fa-github"></i></a></li>
+            <li class="social-list__item"><a class="social-list__link" href="https://www.linkedin.com/in/ryan-ghosh-6aa3231a2/"><i class="fab fa-linkedin"></i></a></li>
+            <li class="social-list__item"><a class="social-list__link" href="https://www.instagram.com/ryan.ghosh_/"><i class="fab fa-instagram"></i></a></li>
+        </ul>
+    </footer>
+    <script src="script.js"></script>
   </body>
 </html>
