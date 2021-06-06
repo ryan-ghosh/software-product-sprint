@@ -30,10 +30,10 @@ navLinks.forEach(link => {
 
 async function showMessage() {
   const responseFromServer = await fetch('/hello');
-  const textFromResponse = await responseFromServer.text();
+  const textFromResponse = await responseFromServer.json();
 
   const helloContainer = document.getElementById('hello-container');
-  helloContainer.innerText = textFromResponse;
+  helloContainer.innerText = textFromResponse[Math.floor(Math.random() * textFromResponse.length)];
 }
 
 function addRandomGreeting() {
