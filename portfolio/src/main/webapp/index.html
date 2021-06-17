@@ -8,6 +8,40 @@
     <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/5.11.2/css/all.css">
     <link rel="stylesheet" href="style.css">
     <link href="https://fonts.googleapis.com/css?family=Source+Code+Pro:400,900|Source+Sans+Pro:300,900&display=swap" rel=stylesheet>
+    <script src="https://www.gstatic.com/charts/loader.js"></script>
+    <script>
+    google.charts.load('current', {packages: ['corechart']});
+    google.charts.setOnLoadCallback(drawChart);
+
+    function drawChart() {
+      // Define the chart to be drawn.
+      var data = new google.visualization.DataTable();
+      data.addColumn('string', 'Programming Languages');
+      data.addColumn('number', 'Lines of Code');
+      data.addRows([
+        ['Python', 7500],
+        ['C++', 10000],
+        ['Q', 2000]
+      ]);
+    var options = {'title':'My Favorite Programming Languages',
+                    'width':1000,
+                    'height':300,
+                    'is3D': true
+                };
+      // Instantiate and draw the chart.
+      var chart = new google.visualization.BarChart(document.getElementById('myPieChart'));
+      function selectHandler() {
+          var selectedItem = chart.getSelection()[0];
+          if (selectedItem) {
+            var language = data.getValue(selectedItem.row, 0);
+            alert('The user selected ' + language);
+          }
+        }
+
+        google.visualization.events.addListener(chart, 'select', selectHandler); 
+      chart.draw(data, options);
+    }
+    </script>
   </head>
   <body>
       <header>
@@ -127,7 +161,7 @@
     <br/>
     <input type="submit" />
     </form>
-
+    <div id="myPieChart"/></div>
     <footer class="footer">
         <a href="mailto:ryan.ghosh21@gmail.com" class="footer-link">ryan.ghosh21@gmail.com</a>
         <ul class="social-list">
