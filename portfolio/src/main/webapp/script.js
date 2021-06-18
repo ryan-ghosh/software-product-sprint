@@ -28,6 +28,14 @@ navLinks.forEach(link => {
     })
 })
 
+async function showMessage() {
+  const responseFromServer = await fetch('/hello');
+  const textFromResponse = await responseFromServer.json();
+
+  const helloContainer = document.getElementById('hello-container');
+  helloContainer.innerText = textFromResponse[Math.floor(Math.random() * textFromResponse.length)];
+}
+
 function addRandomGreeting() {
   const greetings =
       ['HELLO', 'I like italian food', 'math or programming?', 'I speak French'];
